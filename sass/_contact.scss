@@ -1,0 +1,22 @@
+.contact{
+	width: 100%;
+	float: left;
+
+	.cont-type{
+		margin-bottom: 50px;
+	}
+
+	img{
+
+		width: 64px;
+		float: left;
+	}
+
+	span{
+		margin-top: 12px;
+		margin-left: 20px;
+		float: left;
+		font-size: 32px;
+		font-family: $p-font;
+	}
+}

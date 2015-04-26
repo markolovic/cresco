@@ -1,0 +1,64 @@
+@media screen and (max-width: 1024px) {
+	.art-feats{
+		.art{
+			width: 50%;
+		
+			img{
+				opacity: 0.1;
+			}
+
+			.info{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home-head{
+		h1{
+			font-size: 32px;
+
+			img{
+				height: 42px;
+			}
+		}
+
+		.menu{
+			ul{
+				li{
+					font-size: 22px;
+				}
+			}
+		}
+	}
+
+	.art-feats{
+		.info{
+			h2{
+				font-size: 24px;
+			}
+			p{
+				font-size: 16px;
+			}
+		}
+	}
+
+	.feat-vids{
+		.vid{
+			h2{
+				font-size: 24px;
+			}
+
+			p{
+				font-size: 16px;
+			}
+		}
+	}
+
+	.footer{
+		li{
+			font-size: 16px;	
+		}
+	}
+}

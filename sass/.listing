@@ -1,0 +1,11 @@
+drwxr-xr-x    2 2597608    2599026          2048 Mar  6 20:21 .
+drwxr-xr-x    7 2597608    2599026          2048 Mar 16 23:18 ..
+-rw-r--r--    1 2597608    2599026          1086 Mar  6 20:36 _about.scss
+-rw-r--r--    1 2597608    2599026           336 Mar  6 20:36 _articles.scss
+-rw-r--r--    1 2597608    2599026           251 Mar  6 20:36 _contact.scss
+-rw-r--r--    1 2597608    2599026           368 Mar  6 20:36 _footer.scss
+-rw-r--r--    1 2597608    2599026           630 Mar  6 20:36 _ipad.scss
+-rw-r--r--    1 2597608    2599026            97 Mar  6 20:36 _laptop.scss
+-rw-r--r--    1 2597608    2599026           407 Mar  6 20:36 _services.scss
+-rw-r--r--    1 2597608    2599026           926 Mar  6 20:36 _single.scss
+-rw-r--r--    1 2597608    2599026          3968 Mar  6 20:36 style.scss

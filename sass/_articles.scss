@@ -1,0 +1,21 @@
+.home-head{
+
+	input{
+		width: 100%;
+		margin-top: 50px;
+		border: 0px;
+		font-size: 32px;
+		border-bottom: 2px solid $grey;
+		color: $f-grey;
+		font-family: $p-font;
+		transition-duration: .3s;
+	}
+
+	input:hover{
+		border-bottom: 2px solid $border-grey;
+	}
+
+	input:focus{
+		border-bottom: 2px solid $border-grey;
+	}
+}

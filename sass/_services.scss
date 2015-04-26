@@ -1,0 +1,27 @@
+.service{
+	width: 100%;
+	float: left;
+	margin-top: 70px;
+	margin-bottom: 20px;
+	
+	h2{
+		margin-bottom: 20px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid $border-grey;
+		font-size: 72px;
+		font-family: $h-font;
+	}
+
+	img{
+		width: 100%;
+		color: $f-grey;
+		font-family: $p-font;
+	}
+
+	p{
+		margin-top: 20px;
+		font-size: 20px;
+		text-align: justify;
+		font-family: $p-font;
+	}
+}

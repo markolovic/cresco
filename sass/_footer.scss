@@ -1,0 +1,28 @@
+			// FOOTER
+
+
+.footer{
+	width: 100%;
+	padding-top: 20px;
+	padding-top: 40px;
+	background-color: $light-grey;
+	float: left;
+
+
+	h3{
+		margin-bottom: 10px;
+		font-size: 32px;
+		font-family: $h-font;
+	}
+
+	li{
+		margin-left: 5px;
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-family: $p-font;
+	}
+
+	li:hover{
+		text-decoration: underline;
+	}
+}
