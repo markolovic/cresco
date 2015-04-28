@@ -44,9 +44,10 @@ Template Name: Video Archive
 
 <div class="feat-vids">
 	<div class="grid">
-	<?php query_posts('posts_per_page=0&cat=7'); ?>
-	<?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
+  <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
+  <?php $the_query = new WP_Query( 'posts_per_page=5&cat=7&paged=' . $paged ); ?>
+	<?php if ( $the_query->have_posts() ) : ?>
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		<!-- VID STARTS -->
 		<div class="vid">
 			<div class="row">
@@ -67,6 +68,9 @@ Template Name: Video Archive
 		</div>
 		<!-- VID ENDS -->
 		<?php endwhile;?>
+    <nav class="pagination">
+      <?php pagination_bar( $the_query, $paged ); ?>
+    </nav>
 		<?php else : ?>
 		<?php endif; wp_reset_query(); ?>
 	</div>
