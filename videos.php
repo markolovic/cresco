@@ -45,7 +45,7 @@ Template Name: Video Archive
 <div class="feat-vids">
 	<div class="grid">
   <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
-  <?php $the_query = new WP_Query( 'posts_per_page=5&cat=7&paged=' . $paged ); ?>
+  <?php $the_query = new WP_Query( 'cat=7&paged=' . $paged ); ?>
 	<?php if ( $the_query->have_posts() ) : ?>
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		<!-- VID STARTS -->
