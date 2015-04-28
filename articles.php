@@ -42,7 +42,6 @@ Template Name: Article Archive
 		<!-- TOP HEADER ENDS -->
 
 <div class="art-feats">
-	<?php // query_posts('posts_per_page=0&cat=3'); ?>
   <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
   <?php $the_query = new WP_Query( 'cat=3&paged=' . $paged ); ?>
 	<?php if ( $the_query->have_posts() ) : ?>
@@ -61,18 +60,19 @@ Template Name: Article Archive
 	<?php endwhile;?>
   <nav class="pagination">
   <?php 
-    $big = 99999999;
-    $total_pages = $the_query->max_num_pages;
-    $current_page = max(1, $paged);
+    //$big = 99999999;
+    //$total_pages = $the_query->max_num_pages;
+    //$current_page = max(1, $paged);
 
-    if ($total_pages > 1) {
-      echo paginate_links(array(
-        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big )) ),
-        'format' => '?paged=%#%',
-        'current' => $current_page,
-        'total' => $total_pages,
-      ));
-    }
+    //if ($total_pages > 1) {
+      //echo paginate_links(array(
+        //'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big )) ),
+        //'format' => '?paged=%#%',
+        //'current' => $current_page,
+        //'total' => $total_pages,
+      //));
+    //}
+    pagination_bar( $the_query, $paged );
   ?>
   </nav>
   <?php wp_reset_postdata(); ?>
