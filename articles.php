@@ -42,9 +42,11 @@ Template Name: Article Archive
 		<!-- TOP HEADER ENDS -->
 
 <div class="art-feats">
-	<?php query_posts('posts_per_page=0&cat=3'); ?>
-	<?php if ( have_posts() ) : ?>
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php // query_posts('posts_per_page=0&cat=3'); ?>
+  <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; ?>
+  <?php $the_query = new WP_Query( 'cat=3&paged=' . $paged ); ?>
+	<?php if ( $the_query->have_posts() ) : ?>
+	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 	<a href="<?php the_permalink(); ?>">
 	<div class="art">
 		<img src="<?php the_field('thumbnail_image'); ?>">
@@ -57,8 +59,25 @@ Template Name: Article Archive
 	</div>
 	</a>
 	<?php endwhile;?>
+  <nav class="pagination">
+  <?php 
+    $big = 99999999;
+    $total_pages = $the_query->max_num_pages;
+    $current_page = max(1, $paged);
+
+    if ($total_pages > 1) {
+      echo paginate_links(array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big )) ),
+        'format' => '?paged=%#%',
+        'current' => $current_page,
+        'total' => $total_pages,
+      ));
+    }
+  ?>
+  </nav>
+  <?php wp_reset_postdata(); ?>
 	<?php else : ?>
-	<?php endif; wp_reset_query(); ?>
+	<?php endif; ?>
 </div>
 		<!--  ARTICLE FEATURES ENDS -->
 
