@@ -60,7 +60,7 @@ Template Name: Article Archive
 	<?php endwhile;?>
   <nav class="pagination">
   <?php 
-    pagination_bar( $the_query, $paged );
+    //pagination_bar( $the_query, $paged );
   ?>
   </nav>
   <?php wp_reset_postdata(); ?>
