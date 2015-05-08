@@ -49,10 +49,10 @@ Template Name: Video Archive
 	<?php if ( $the_query->have_posts() ) : ?>
 	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 		<!-- VID STARTS -->
-		<div class="vid">
-			<div class="row">
+    <div class="row">
+      <div class="vid">
 				<div class="slot-0-1-2">
-					<iframe src="//www.youtube.com/embed/<?php the_field('embed-link'); ?>" frameborder="0" allowfullscreen></iframe>
+					<iframe class="video-archive-iframe" src="//www.youtube.com/embed/<?php the_field('embed-link'); ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="slot-3-4-5">
 					<div class="row">
